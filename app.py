@@ -24,3 +24,8 @@ def webhook():
             client = gspread.authorize(creds)
             sheet
 
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))  # Usá el puerto que Render define
+    app.run(host="0.0.0.0", port=port)
+
