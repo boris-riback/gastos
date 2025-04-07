@@ -46,8 +46,8 @@ def webhook():
         sheet.append_row([fecha, responsable, monto, motivo])
 
         return "Gasto registrado correctamente ✅", 200
-
-    except Exception as e:
+     except Exception as e:
+        print(f"ERROR EN WEBHOOK: {str(e)}")  # 🔥 ESTA LÍNEA AGREGA LOS ERRORES A LOS LOGS
         return f"Error al procesar el webhook: {str(e)}", 500
 
 if __name__ == "__main__":
