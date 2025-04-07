@@ -13,7 +13,7 @@ WORKSHEET_NAME = "Hoja 1"
 
 def get_gspread_client():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-credentials_dict = json.loads(os.environ["CREDENTIALS_JSON"])
+    credentials_dict = json.loads(os.environ["CREDENTIALS_JSON"])
     client = gspread.service_account_from_dict(credentials_dict)
     return client
 
